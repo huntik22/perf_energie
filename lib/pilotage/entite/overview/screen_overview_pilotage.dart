@@ -70,7 +70,7 @@ class _ScreenOverviewPilotageState extends State<ScreenOverviewPilotage> {
                           padding: EdgeInsets.only(right: 15),
                           child: Column(
                             children: const [
-                              // OverviewPilotage(),
+                              OverviewPilotage(),
                               SizedBox(
                                 height: 20,
                               ),

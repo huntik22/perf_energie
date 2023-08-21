@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../constant/colors.dart';
 import 'pilier_model.dart';
 
-
 class PilierInfoCard extends StatelessWidget {
   const PilierInfoCard({
     Key? key,
@@ -16,67 +15,77 @@ class PilierInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(defaultPadding),
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: EdgeInsets.all(defaultPadding * 0.25),
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  color: info.color!.withOpacity(0.1),
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+    return Card(
+      elevation: 20,
+      child: Container(
+        padding: const EdgeInsets.all(defaultPadding),
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(defaultPadding * 0.25),
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: info.color!.withOpacity(0.1),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  ),
+                  child: Image.asset(
+                    info.svgSrc!,
+                  ),
                 ),
-                child: Image.asset(
-                  info.svgSrc!,
+                Text(
+                  "${info.percentage} %",
+                  style: TextStyle(
+                      color: info.percentage! < 30
+                          ? Colors.red
+                          : info.percentage! < 60
+                              ? Colors.yellow
+                              : info.percentage! < 75
+                                  ? Colors.green
+                                  : Colors.blue,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            Text(
+              info.title!,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+            ProgressLine(
+              color: info.color,
+              percentage: info.percentage,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "${info.numOfFiles} indicateurs sur",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall!
+                      .copyWith(color: Colors.black87),
                 ),
-              ),
-              Text("${info.percentage} %",style: TextStyle(
-                  color: info.percentage! < 30 ?  Colors.red :
-                  info.percentage! < 60 ? Colors.yellow : info.percentage! < 75 ?
-                      Colors.green : Colors.blue,fontWeight: FontWeight.bold
-              ),)
-            ],
-          ),
-          Text(
-            info.title!,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-          ),
-          ProgressLine(
-            color: info.color,
-            percentage: info.percentage,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "${info.numOfFiles} indicateurs sur",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .copyWith(color: Colors.black87),
-              ),
-              Text(
-                info.totalStorage!,
-                style: Theme.of(context)
-                    .textTheme
-                    .caption!
-                    .copyWith(color: Colors.black),
-              ),
-            ],
-          )
-        ],
+                Text(
+                  info.totalStorage!,
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(color: Colors.black),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

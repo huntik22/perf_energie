@@ -11,74 +11,7 @@ import 'widgets/data_table/dashboard_header.dart';
 import 'widgets/data_table/dashboard_list_view.dart';
 import 'widgets/entete_widget.dart';
 import 'package:go_router/go_router.dart';
-/* class TableauBordPilotage extends StatefulWidget {
-  const TableauBordPilotage({Key? key}) : super(key: key);
 
-  @override
-  State<TableauBordPilotage> createState() => _TableauBordPilotageState();
-}
-
-class _TableauBordPilotageState extends State<TableauBordPilotage> {
-
-  final tableauBordController =  Get.put(TableauBordController());
-  late ScrollController _scrollController;
-
-
-  @override
-  void initState() {
-    _scrollController = ScrollController();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(left: defaultPadding,right: defaultPadding,bottom: defaultPadding,top: 5),
-      color: Colors.orange,
-      child: Obx((){
-        return Column(
-          children: [
-            // const EnteteTableauBord(),
-            // const DashBoardFiltre(),
-            // CollecteStatus(),
-            // DashBoardHeader(),
-            /*Expanded(child: Column(
-              children: [
-                DashBoardListView(),
-                Text("${tableauBordController.indicateurs}"),
-              ],
-            )),*/
-            Expanded(child: Theme(
-              data: Theme.of(context).copyWith(scrollbarTheme: ScrollbarThemeData(
-                trackColor:  MaterialStateProperty.all(Colors.black12),
-                trackBorderColor: MaterialStateProperty.all(Colors.black38),
-                thumbColor: MaterialStateProperty.all(Colors.black),
-                interactive: true,
-              )),
-              child: Scrollbar(
-                controller: _scrollController,
-                thumbVisibility: true,
-                thickness: 8,
-                child: SingleChildScrollView(
-                  controller: _scrollController,
-                  physics: const BouncingScrollPhysics(),
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 10.0),
-                    child: Column(
-                      children: tableauBordController.indicateurs.map(
-                              (indicateur) => RowIndicateur(indicateur: indicateur)
-                      ).toList(),
-                    ),
-                  ),
-                ),
-              ),
-            ))
-          ],
-        );
-      }),
-    );
-  }
-} */
 
 
 class TableauBordPilotage2 extends StatefulWidget {

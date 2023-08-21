@@ -8,31 +8,31 @@ List demoContributeurs = [
   ContributeurModel(
     photo_url: "assets/images/person1.png",
     name: "Serge EBRA",
-    entite: "Sucrivoire Siège",
+    entite: "Ayamé",
     access: "Collecteur",
   ),
   ContributeurModel(
     photo_url: "assets/images/person2.png",
     name: "Jean KOUASSI",
-    entite: "SUCRIVOIRE",
+    entite: "Buyo",
     access: "Spectateur",
   ),
   ContributeurModel(
     photo_url: "assets/images/person5.png",
     name: "Anne DUPONT",
-    entite: "Sucrivoire Siège",
+    entite: "Kossou",
     access: "Collecteur",
   ),
   ContributeurModel(
     photo_url: "assets/images/person3.png",
     name: "Marc NAMARA",
-    entite: "Sucrivoire Borotou-Koro",
+    entite: "Taabo",
     access: "Administrateur",
   ),
   ContributeurModel(
     photo_url: "assets/images/person4.png",
     name: "Lucie Koffi",
-    entite: "Sucrivoire Zuénoula",
+    entite: "UTGA",
     access: "Collecteur",
   ),
 ];

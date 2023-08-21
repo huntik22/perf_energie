@@ -12,27 +12,39 @@ class OverviewPilotage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Padding(
+      padding: EdgeInsets.only(left: 30),
+      child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(flex: 5,child: Column(
           children: [
+            // SizedBox(width: 20,),
             SectionSuivi(),
-            SizedBox(height: defaultPadding),
+            SizedBox(height: 50),
             ListeContributeur()
           ],
         )),
-        const SizedBox(width: defaultPadding),
-        Container(width: 300,height: 400,child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Progrès de collecte globale Filiale/Entités",style: Theme.of(context).textTheme.titleMedium,),
-            SizedBox(height: defaultPadding),
-            CollecteGlobale()
-          ],
-        ),),
-        const SizedBox(width: defaultPadding),
+        const SizedBox(width: defaultPadding,),
+        Card(
+          elevation: 30,
+          child: Container(
+            width: 300,
+            height: 370,
+            // decoration: BoxDecoration(color: Colors.white),
+            child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Text("Progrès de collecte globale usines",style: Theme.of(context).textTheme.titleMedium,),
+              // SizedBox(height: defaultPadding),
+              CollecteGlobale()
+            ],
+          ),),
+
+        ),
+        // const SizedBox(width: defaultPadding),
       ],
-    );
-  }
+    ),
+  );
+}
 }

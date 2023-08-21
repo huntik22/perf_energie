@@ -16,23 +16,33 @@ class CollecteGlobale extends StatefulWidget {
 class _CollecteGlobaleState extends State<CollecteGlobale> {
 
   final entityInfos = [
-    {
+    /* {
       "nom":"SUCRIVOIRE",
       "2022":65,
       "2023":78
-    },
+    }, */
     {
-      "nom":"Sucrivoire Siège",
+      "nom":"Ayamé",
       "2022":25,
       "2023":68
     },
     {
-      "nom":"Sucrivoire Zuénoula",
+      "nom":"Buyo",
+      "2022":25,
+      "2023":68
+    },
+    {
+      "nom":"Kossou",
       "2022":70,
       "2023":45
     },
     {
-      "nom":"Sucrivoire Borotou-Koro",
+      "nom":"Taabo",
+      "2022":69,
+      "2023":80
+    },
+    {
+      "nom":"UTAG",
       "2022":69,
       "2023":80
     },
@@ -41,6 +51,8 @@ class _CollecteGlobaleState extends State<CollecteGlobale> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 300,
+      height: 370,
       padding: const EdgeInsets.all(defaultPadding),
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -49,12 +61,14 @@ class _CollecteGlobaleState extends State<CollecteGlobale> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text("Progrès de collecte globale usines",style: Theme.of(context).textTheme.titleMedium,),
+          SizedBox(height: 10,),
           DataTable(
               columnSpacing: 12,
               horizontalMargin: 12,
               columns: const [
                 DataColumn(
-                  label: Text("Filiale/Entités"),
+                  label: Text("Usines"),
                 ),
                 DataColumn(
                   label: Text("2022"),

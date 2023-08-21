@@ -20,7 +20,7 @@ class PilierInfoModel {
 
 List demoPiliers = [
   PilierInfoModel(
-    title: "GOUVERNANCE ET ÉTHIQUE",
+    title: " GOUVERNANCE\n ENERGETIQUE",
     numOfFiles: 50,
     svgSrc: "assets/icons/gouvernance.png",
     totalStorage: "125",
@@ -28,7 +28,7 @@ List demoPiliers = [
     percentage: 45,
   ),
   PilierInfoModel(
-    title: "EMPLOI ET CONDITIONS DE TRAVAIL",
+    title: " MAITRISE\n OPERATIONNELLE",
     numOfFiles: 80,
     svgSrc: "assets/icons/economie.png",
     totalStorage: "120",
@@ -36,7 +36,7 @@ List demoPiliers = [
     percentage: 70,
   ),
   PilierInfoModel(
-    title: "COMMUNAUTES ET INNOVATION SOCIETALE",
+    title: " PERFORMANCE\n ENERGETIQUE",
     numOfFiles: 20,
     svgSrc: "assets/icons/social.png",
     totalStorage: "140",
@@ -44,7 +44,7 @@ List demoPiliers = [
     percentage: 15,
   ),
   PilierInfoModel(
-    title: "ENVIRONNEMENT",
+    title: " AMELIORATION DU\n MANAGEMENT ENERGETIQUE",
     numOfFiles: 63,
     svgSrc: "assets/icons/environnement.png",
     totalStorage: "70",

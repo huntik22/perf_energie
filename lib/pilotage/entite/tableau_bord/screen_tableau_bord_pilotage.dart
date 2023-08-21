@@ -51,6 +51,7 @@ class _ScreenTableauBordPilotageState extends State<ScreenTableauBordPilotage> {
               child: Column(
                 children: [
                   Expanded(child: Center(
+                    widthFactor: 900,
                     child: TableauBordPilotage2(),
                   ))
                 ],

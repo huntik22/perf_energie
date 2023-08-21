@@ -7,12 +7,14 @@ import 'package:login/routes/routes.dart';
 import 'controller/auth_controller.dart';
 import 'loginpage.dart';
 import 'package:login/resetPasswd/resetpasswordcontroller.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Get.put(ResetPassWordController());
   await Get.put(AuthController());
+  await Supabase.initialize(url: 'https://ucgfmgpinadufxdefkmd.supabase.co', anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjZ2ZtZ3BpbmFkdWZ4ZGVma21kIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIxOTc4NjcsImV4cCI6MjAwNzc3Mzg2N30.0JTxxwSCyESZ-0yiFX9Ri0PJu3BjWu4z4qxUZ5UbsDo'); 
   runApp( MyApp());
 }
 

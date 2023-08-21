@@ -84,7 +84,6 @@ class _CopyRightState extends State<CopyRight> {
         var response = await http.get(Uri.parse('http://127.0.0.1:5000/'),
             headers: {"Access-Control-Allow-Origin": "*"});
         if (response.statusCode == 200) {
-          print(response.body);
           setState(() {
             isConnected = true;
           });
@@ -95,7 +94,7 @@ class _CopyRightState extends State<CopyRight> {
           print(e.toString());
         });
       }
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(Duration(minutes: 1));
     }
   }
 }
